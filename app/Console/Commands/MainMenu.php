@@ -64,7 +64,7 @@ d8:   .8P   88   88.  .88 88       88.  .88   88   88.  .88 88.  .88 88
                     view('cli.label-value', [
                             'label' => "Selected Space ID",
                             'value' => $this->space->id()
-                    ])
+                    ])->render()
                 );
                 render(
                     view('cli.label-value', [
@@ -97,7 +97,7 @@ d8:   .8P   88   88.  .88 88       88.  .88   88   88.  .88 88.  .88 88
                     $this->info("Space ID set to: {$this->space->id()}");
                     $this->info("Space          : {$this->space->name()}");
                 } catch (\Exception $e) {
-                    $this->error("Space now valid for : {$spaceId}");
+                    $this->error("Space NOT valid for : {$spaceId}");
                     //$this->space = null;
                 }
 
